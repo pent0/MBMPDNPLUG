@@ -36,5 +36,10 @@ namespace PaintDotNet.Data.MbmFileType
             MbmFile file = new MbmFile(fileStream);
             return MbmLoad.Load(file, fileStream);
         }
+
+        protected override void OnSave(Document input, Stream output, SaveConfigToken token, Surface scratchSurface, ProgressEventHandler callback)
+        {
+            MbmSave.Save(input, output, scratchSurface, 24, BitmapColor.Color);
+        }
     }
 }

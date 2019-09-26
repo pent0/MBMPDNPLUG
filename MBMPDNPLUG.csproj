@@ -62,9 +62,11 @@
     <Compile Include="Common.cs" />
     <Compile Include="Exception.cs" />
     <Compile Include="MbmBinaryReader.cs" />
+    <Compile Include="MbmBinaryWriter.cs" />
     <Compile Include="MbmFile.cs" />
     <Compile Include="MbmFileType.cs" />
     <Compile Include="MbmLoad.cs" />
+    <Compile Include="MbmSave.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

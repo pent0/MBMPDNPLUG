@@ -55,7 +55,7 @@ namespace PaintDotNet.Data.MbmFileType
             switch (header.compression)
             {
                 case BitmapCompression comp when (comp <= BitmapCompression.ThirtyTwoABitsRLE && comp > BitmapCompression.None):
-                    Algorithm.RLEDecompressor.Decompress(destinationStream, source, comp);
+                    Algorithm.RLEDecompressor.Decompress(destinationStream, source, (int)compressedSize, comp);
                     break;
 
                 default:
